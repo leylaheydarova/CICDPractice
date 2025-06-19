@@ -434,11 +434,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Coursera\\Deployment and DevOps\\AzureLogin\\AzureLogin.App\\AzureLogin.App.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Coursera\\AzureLogin\\AzureLogin.App\\AzureLogin.App.csproj",
       "projectName": "AzureLogin.App",
-      "projectPath": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Coursera\\Deployment and DevOps\\AzureLogin\\AzureLogin.App\\AzureLogin.App.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Coursera\\AzureLogin\\AzureLogin.App\\AzureLogin.App.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Coursera\\Deployment and DevOps\\AzureLogin\\AzureLogin.App\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Learning Programming\\Student\\Coursera\\AzureLogin\\AzureLogin.App\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
