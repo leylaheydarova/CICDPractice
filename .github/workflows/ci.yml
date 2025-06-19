@@ -18,13 +18,13 @@ jobs:
           dotnet-version: "8.0.x"
 
       - name: Restore dependencies
-        run: dotnet restore AzureLogin/AzureLogin.App/AzureLogin.App.csproj
+        run: dotnet restore AzureLogin.App/AzureLogin.App.csproj
 
       - name: Build
-        run: dotnet build AzureLogin/AzureLogin.App/AzureLogin.App.csproj --no-restore --configuration Release
+        run: dotnet build AzureLogin.App/AzureLogin.App.csproj --no-restore --configuration Release
 
       - name: Publish app
-        run: dotnet publish AzureLogin/AzureLogin.App/AzureLogin.App.csproj -c Release -o publish
+        run: dotnet publish AzureLogin.App/AzureLogin.App.csproj -c Release -o publish
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
