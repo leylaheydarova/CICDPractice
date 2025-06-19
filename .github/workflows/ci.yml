@@ -2,7 +2,7 @@ name: ASP.NET Core CI/CD
 
 on:
   push:
-    branches: [main] # əgər başqa branch-dəsənsə, onu yaz
+    branches: [main]
 
 jobs:
   build-and-deploy:
@@ -15,21 +15,18 @@ jobs:
       - name: Setup .NET SDK
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: "8.0.x" # və ya hansını istifadə edirsənsə
+          dotnet-version: "8.0.x"
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore AzureLogin/AzureLogin.App/AzureLogin.App.csproj
 
       - name: Build
-        run: dotnet build ./AzureLogin/AzureLogin.App.csproj --no-restore --configuration Release
+        run: dotnet build AzureLogin/AzureLogin.App/AzureLogin.App.csproj --no-restore --configuration Release
 
       - name: Publish app
-        run: dotnet publish ./AzureLogin/AzureLogin.App.csproj -c Release -o publish
+        run: dotnet publish AzureLogin/AzureLogin.App/AzureLogin.App.csproj -c Release -o publish
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
         with:
-          app-name: AzureLoginApp # Azure App Service adını buraya yaz
-          slot-name: "production"
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: publish
+          app-name: AzureLoginApp

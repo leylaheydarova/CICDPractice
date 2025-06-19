@@ -12,12 +12,12 @@ az group create --name MyDemoResourceGroup  --location eastus(bu islemedi F1 ile
 az group list --output table (grouplari yoxlamaq ucun)
 
 5. Create an Azure App Service Plan (replace <app-service-plan> with your chosen name):
-az appservice plan create --name <app-service-plan> --resource-group <resource-group-name> --sku F1
+az appservice plan create --name MyDemoPlan --resource-group <resource-group-name> --sku F1
 
 az appservice plan list --resource-group MyDemoResourceGroup --output table(planlari yoxlamaq ucun)
 
 6. Deploy an App Service instance (replace <app-name> with your chosen name):
-az webapp create --name <app-name> --resource-group <resource-group-name> --plan <app-service-plan>
+az webapp create --name AzureLoginApp --resource-group MyDemoResourceGroup  --plan MyDemoPlan 
 
 7. Navigate to your project folder in the VS Code terminal. (.sln olan qovluqa kec)
 
